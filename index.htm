@@ -2,33 +2,51 @@
 <html>
 <head>
 <style>
+    /* Hero Banner Styles */
+    #hero {
+        position: relative;
+        height: 60vh;
+        overflow: hidden;
+        background: #000;
+        margin-bottom: 20px;
+    }
+    .site-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 4rem;
+        text-shadow: 0 0 12px #000;
+        z-index: 10;
+    }
 
-.flex-container { /* makes containers for columns */
-  display: flex; /* makes them fill space themselves */
-  gap: 20px; /* space between columns */
-}
-.flex-container2 {
-  display: flex;
-  gap: 20px;
-}
+    /* Your existing styles */
+    .flex-container { /* makes containers for columns */
+        display: flex; /* makes them fill space themselves */
+        gap: 20px; /* space between columns */
+    }
+    .flex-container2 {
+        display: flex;
+        gap: 20px;
+    }
 
-.column {
-  width: 600px; /* fixed width for all columns */
-  background-color:lightblue; /* backround color */
-  
-  
-  text-align: center; /* centers text */
-}
+    .column {
+        width: 600px; /* fixed width for all columns */
+        background-color:lightblue; /* backround color */
+        
+        
+        text-align: center; /* centers text */
+    }
 
-h2 {
-  
-  font-size: 150%; /* increases font size for h2 */
-}
+    h2 {
+        
+        font-size: 150%; /* increases font size for h2 */
+    }
 
-.centered {
-	text-align: center;
-}
-
+    .centered {
+        text-align: center;
+    }
 </style>
 
 
@@ -39,7 +57,12 @@ h2 {
 </head>
 <body style="background-color:lightgray;"> <!-- makes whole backround grey -->
 
-<h1 style="text-align:center;color:darkblue;font-family:futura;";> Ansel's Pots</h1> <!-- adds heading with many style changes  -->
+    <!-- Hero Banner Section -->
+    <header id="hero">
+        <h1 class="site-title">Ansel's Pots</h1>
+    </header>
+
+
 <p style="text-align:center;font-family:futura;font-size:115%;"> Jars, bowls, cups, vases, plates, and more!</p> <!-- adds description with many style changes -->
 
 
@@ -64,7 +87,9 @@ h2 {
 </h2>
 <a href="https://collections.artsmia.org/art/9481/pot-djenne-artist" class="centered">Pot</a>
 
-
+    <!-- Load p5.js and your sketch -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
+    <script src="js/herobanner/mySketch.js"></script>
 
 </body>
 </html>

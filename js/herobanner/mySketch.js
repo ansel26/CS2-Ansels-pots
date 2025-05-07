@@ -1,11 +1,11 @@
-/* ORIGINAL: "Particle Banner" by Jane Doe – CC-BY 4.0
-URL: https://openprocessing.org/sketch/123456
+/* ORIGINAL: "Waves light" by Jubal smith – CC-BY 4.0
+URL: https://openprocessing.org/sketch/2559208
 Remixed by <Ansel>, 2025-05-05
 Purpose: animated hero background
 */
 
 // Global variables for the animation
-var nmobiles = 6000;    // Total number of particles to animate // CHANGE: added more particles
+var nmobiles = 4000;    // Total number of particles to animate // CHANGE: added more particles
 var mobiles = [];       // Array to store all particle objects
 var noisescale;        // Controls the granularity of Perlin noise
 var a1, a2, a3, a4, a5, amax;  // Parameters that affect noise patterns and movement
@@ -13,9 +13,12 @@ var bw = true;         // Boolean to toggle between black/white (true) or color 
 
 // Initial setup function - runs once when sketch starts
 function setup() {
-  // Create canvas and attach to hero section
-  const canvas = createCanvas(windowWidth, windowHeight * 0.6); // Make canvas 60% of window height
-  canvas.parent('hero'); // Place canvas inside hero element
+  // Get the hero element
+  const hero = document.getElementById('hero');
+  // Create canvas that fits the hero section
+  const canvas = createCanvas(hero.offsetWidth, hero.offsetHeight);
+  // Position the canvas in the hero section
+  canvas.parent('hero');
   
   background(0);        // Set black background
   noFill();            // Don't fill shapes, only draw outlines
